@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>3-D Viewer Web App</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="Project_CSS.css">
+  <script src="jquery-3.6.0.min.js"></script>
+
+  <script src="three.min.js"></script>
+  <script src="GLTFLoader.js"></script>
+  <script src="OrbitControls.js"></script>
+  <script src="Project_JS.js"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script> -->
+</head>
+
+<body class="body">
+  <!-- Optional JavaScript --
+
+
+  <div class="container-fluid">
+
+    <!-- Model Tree     -->
+  <div id="bg">
+    <div class="row">
+
+      <div class="col-md-2" id="Model_Tree">
+        <h1>Model Tree</h1>
+
+        <div class="row-md-12" id="Wing"> <button onclick="open_wing();forward_sound()">Wing</button> </div>
+
+        <div class="row-md-12" id="Fuselage"> <button onclick="open_fuselage();forward_sound()">Fuselage</button>
+        </div>
+
+        <div class="row-md-12" id="Tail"> <button onclick="open_tail();forward_sound()">Tail</button></div>
+
+        <div class="row-md-12" id="Winglet"> <button onclick="open_winglet();forward_sound()">Winglet</button> </div>
+
+        <div class="row-md-12" id="Propulsion"> <button onclick="open_propulsion();forward_sound()">Propulsion</button>
+        </div>
+
+        <div class="row-md-12" id="Wing_Section_1"> <button onclick="load_model('scene.gltf')">Size 1</button> </div>
+
+        <div class="row-md-12" id="Wing_Section_2"> <button>Size 2</button> </div>
+
+        <div class="row-md-12" id="Wing_Section_3"> <button>Size 3</button> </div>
+
+        <div class="row-md-12" id="Fuselage_Section_1"> <button onclick="load_model('scene.gltf')">Size 1</button> </div>
+
+        <div class="row-md-12" id="Fuselage_Section_2"> <button>Size 2</button> </div>
+
+        <div class="row-md-12" id="Fuselage_Section_3"> <button>Size 3</button> </div>
+
+        <div class="row-md-12" id="Tail_Section_1"> <button onclick="load_model('scene.gltf')">Size 1</button> </div>
+
+        <div class="row-md-12" id="Tail_Section_2"> <button onclick="test()">Size 2</button> </div>
+
+        <div class="row-md-12" id="Tail_Section_3"> <button>Size 3</button> </div>
+
+        <div class="row-md-12" id="Winglet_Section_1"> <button onclick="load_model('scene.gltf')">Size 1</button> </div>
+
+        <div class="row-md-12" id="Winglet_Section_2"> <button>Size 2</button> </div>
+
+        <div class="row-md-12" id="Winglet_Section_3"> <button>Size 3</button> </div>
+
+        <div class="row-md-12" id="Propulsion_Section_1"> <button onclick="load_model('scene.gltf')">Motor 1</button> </div>
+
+        <div class="row-md-12" id="Propulsion_Section_2"> <button>Motor 2</button> </div>
+
+        <div class="row-md-12" id="Propulsion_Section_3"> <button>Motor 3</button> </div>
+
+        <div class="row-md-12" id="back_button"> <button onclick="back();backward_sound()"> Back </button> </div>
+
+
+      </div>
+      <!---->
+
+
+      <!-- 3-D Model Viewer -->
+      <div class="col-md-9" id="Model_Viewer">
+        <h1>Model Viewer</h1>
+        <!-- <img src="Drone.png" alt=""> -->
+        <div id="3d_model" style="height: 500px; width:100%"></div>
+      </div>
+
+    </div>
+    <!---->
+
+
+    <!--  Miscellaneous Bar     -->
+    <div class="row-md-12" id="Miscellaneous">
+      <h1>Miscellaneous Bar</h1>
+      <div class="col-md-6"> </div>
+      <div class="col-md-6"> </div>
+      <div class="col-md-6"> </div>
+    </div>
+    <!---->
+  </div>
+  </div>
+</body>
+
+</html>

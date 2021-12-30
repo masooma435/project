@@ -1,0 +1,110 @@
+
+
+.body {
+   background-color: black; 
+   color: white;
+   font-family: 'Times New Roman', Times, serif;
+   font-size: medium;
+ 
+}
+
+div#Model_Tree {
+padding: 20px;
+border: solid;
+border-color: white;
+margin: 20px;
+}
+
+div#Model_Tree  h1  {
+    text-align: center;
+    font-weight: 1000;
+    
+}
+
+div#Model_Tree  button  {
+ margin-left: 20%;
+ width: 150px;
+ text-align: center;
+ background-color: grey;
+ font-weight: bolder;
+ transition: 0.3s;
+}
+
+#back_button  {
+    width: 50px;
+    margin-top: 50px;
+    margin-left: 40%;
+    text-align: center;
+    font-weight: bolder;
+    transition: 0.3s;
+   }
+
+div#Model_Tree  button:hover  {
+    background-color: gold;
+}
+ 
+div#back_button  button:hover  {
+    background-color: chocolate;
+}
+ 
+div#Model_Viewer {
+padding: 20px;
+border: solid;
+border-color: white;
+margin: 20px;   
+}
+
+div#Model_Viewer h1 {
+    text-align: center;
+    font-weight: 1000;
+   
+    
+}
+
+div#Miscellaneous {
+margin-top: 100px;
+border: solid;
+border-color: white;
+padding-bottom: 200px;
+    
+}
+
+div#Miscellaneous h1 {
+    text-align: center;
+    font-weight: 1000;
+   
+}
+
+div#Wing {
+    
+    padding: 10px;
+    margin: 10px;
+}
+
+div#Fuselage {
+     
+    padding: 10px;
+    margin: 10px; 
+}
+
+div#Tail {
+     
+    padding: 10px;
+    margin: 10px;
+}
+
+div#Winglet {
+    
+    padding: 10px;
+    margin: 10px;
+}
+
+div#Propulsion {
+
+    padding: 10px;
+    margin: 10px;
+}
+
+div#Model_Viewer img{
+    margin-left: 30%;
+}
